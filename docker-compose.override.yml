@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  api-vitrine:
+    image: api-bankautomation
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # VARIABLES
+      NODEJS_ENVIRONMENT: Development
+      APP_NAME: BankAutomation
+      APP_WEB_URL: http://127.0.0.1:3333
+
+    ports:
+      - "3333:3333"
+
+
